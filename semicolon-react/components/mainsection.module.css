@@ -1,0 +1,113 @@
+.button{
+    background-color: transparent;
+    color: var(--black);
+    padding: 0.8rem 1.3rem;
+    border-radius: 14px;
+    font-weight: 500;
+    font-size: var(--small-text);
+}
+
+.mainButton{
+    background-color: var(--primary-color);
+    border:2px solid var(--primary-color);
+    color: var(--white);
+    padding: 0.8rem 1.3rem;
+    border-radius: 14px;
+    font-weight: 500;
+    font-size: var(--small-text);
+}
+
+.learnBtn{
+    background: var(--biro-blue);
+    border: none;
+    color: var(--white);
+}
+
+.title{
+    font-size: var(--sub-text);
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.subText{
+    font-size: var(--small-text);
+}
+
+
+/* hero section start */
+.heroSection{
+    width: 90%;
+    margin: 0 auto;
+    min-height: 70vh;
+    display: grid;
+    grid-template-columns: 38% 60%;
+    align-items: center;
+    justify-items: center;
+    gap: 3rem;
+}
+
+.heroSection h1{
+    color: var(--secondary-color);
+    font-size: var(--hero-text);
+    font-weight: 600;
+}
+
+.heroSection small{
+    color: var(--secondary-color);
+    font-size: var(--small-text);
+    font-weight: normal;
+}
+
+.heroLeft{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 90%;
+}
+
+.heroImage img{
+    width: 100%;
+    height: auto;
+}
+
+.heroSection .buttons{
+    margin: 15px 0 0;
+    display: flex;
+    gap: 2.5rem;
+}
+/* hero section end */
+
+/* what we do section */
+.whatWeDo{
+    width: 80%;
+    margin: 100px auto;
+}
+
+.colored{
+    color: var(--primary-color);
+}
+
+.boxes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 10px;
+}
+
+.boxes .hero{
+    font-size: var(--hero-text);
+}
+
+.box{
+    background: var(--primary-color);
+    height: auto;
+    width: auto;
+    padding: 40px;
+    border-radius: 15px;
+    color: var(--white);
+}
+
+.box p{
+    font-size: var(--small-text);
+}
+

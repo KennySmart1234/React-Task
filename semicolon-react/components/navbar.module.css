@@ -1,0 +1,50 @@
+
+.logoBox{
+    display: flex;
+    gap:5px;
+    align-items: center;
+}
+
+.logoImg{
+    width: auto;
+    height: 35px;
+}
+
+.navSection{
+    height: 10vh;
+    width: 100vw;
+    position: fixed;
+    background: var(--white);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+}
+
+.navLinks{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.link{
+    font-size: var(--small-text);
+    font-style: normal;
+    font-weight: 600;
+    color:var(--secondary-color)
+}
+
+.outlineButton{
+    background-color: transparent;
+    border:2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.8rem 1.3rem;
+    border-radius: 14px;
+    font-weight: 500;
+    font-size: var(--small-text);
+}
