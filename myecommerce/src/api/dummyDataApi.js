@@ -12,11 +12,11 @@ export const dummyDataApi = createApi({
             }),  
         }),
         
-        // getProducts: builder.query({
-        //     query: () => "/products",
-        // }),
+        getAllProducts: builder.query({
+            query: () => "/products",
+        }),
 
     }),
 });   
 
-export const {useLoginMutation} = dummyDataApi;
+export const {useLoginMutation, useGetAllProductsQuery} = dummyDataApi;
