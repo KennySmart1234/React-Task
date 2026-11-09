@@ -7,10 +7,23 @@ import { Link, useNavigate } from "react-router-dom";
  
 
 const Login = () => { 
-  const [username, setUsername] = useState(""); 
-  const [password, setPassword] = useState(""); 
+  const userData = {
+    username : "",
+    password : ""
+  }
+
+  const [userDetails, setUserDetails] = useState(userData)
+  // const [username, setUsername] = useState(""); 
+  // const [password, setPassword] = useState(""); 
   const [login, {isLoading}] = useLoginMutation();
   // const []
+
+  const navigate = useNavigate();
+
+  function handleOnChange(event){
+    const {name, value} = event.target;
+    setUserDetails((prev) => ({...prev, [name] : value}))
+  }
 
   
 
@@ -20,7 +33,8 @@ const Login = () => {
     try { 
 
       const response = await login(
-        {  password : password, username : username }
+        userDetails
+        // {  password : password, username : username }
       ).unwrap();
       localStorage.setItem("token", response.accessToken);
       navigate("/products");
@@ -66,7 +80,8 @@ const Login = () => {
               type="text"
               name="username"
               id="username"
-              onChange={(event) => setUsername(event.target.value)}
+              onChange ={handleOnChange}
+              // onChange={(event) => setUsername(event.target.value)}
               placeholder="Enter your username"
               className="w-full px-4 py-3 border border-gray-300 rounded-lg
                          outline-none focus:ring-2 focus:ring-blue-500
@@ -87,7 +102,8 @@ const Login = () => {
               type="password"
               name="password"
               id="password"
-              onChange={(event) => setPassword(event.target.value)}
+              onChange ={handleOnChange}
+              // onChange={(event) => setPassword(event.target.value)}
               placeholder="Enter your password"
               className="w-full px-4 py-3 border border-gray-300 rounded-lg
                          outline-none focus:ring-2 focus:ring-blue-500

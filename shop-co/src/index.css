@@ -1,0 +1,6 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+body { @apply font-body text-black bg-white; }
+.head { font-family: 'Archivo', 'Arial Black', sans-serif; font-stretch: 125%; font-weight: 900; text-transform: uppercase; line-height: 1.05; }
+.wrap { @apply max-w-[1240px] mx-auto px-4 md:px-8 xl:px-0; }
+.btn { @apply bg-black text-white rounded-full font-medium; }
+.pill { @apply bg-soft rounded-full; }
